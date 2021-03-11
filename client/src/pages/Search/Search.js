@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import BookContainer from "../../components/BookContainer/BookContainer";
+
 import "./Search.css";
 
 function Search() {

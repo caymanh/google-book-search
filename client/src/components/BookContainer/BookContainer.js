@@ -1,11 +1,12 @@
 import React from "react";
+import Card from "../Card/Card";
 
 function BookContainer() {
   return (
-    <div className="container border my-5">
-      This is a container
-      </div>
- 
+    <div className="container my-5">
+      <Card />
+      <Card />
+    </div>
   );
 }
 

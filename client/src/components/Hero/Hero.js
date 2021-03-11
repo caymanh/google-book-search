@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="container border my-5">
+    <div className="container my-4">
       <div className="row my-5 mb-4">
         <div className="col">
           <img

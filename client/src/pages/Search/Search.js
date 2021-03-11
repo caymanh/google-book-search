@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "../../components/SearchBar/SearchBar"
-import "./Search.css"
+import SearchBar from "../../components/SearchBar/SearchBar";
+import BookContainer from "../../components/BookContainer/BookContainer";
+import "./Search.css";
 
 function Search() {
+  return (
+    <div>
+      <SearchBar />
+      <BookContainer />
+    </div>
+  );
+}
 
-      return (
-       <SearchBar />
-      );
-    }
-  
-  export default Search;
-  
+export default Search;

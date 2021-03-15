@@ -1,20 +1,30 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+// Import Pages
 import Search from "./pages/Search/Search";
 import Save from "./pages/Save/Save";
-import "./App.css";
+import NoMatch from "./pages/NoMatch/NoMatch";
+
+// Import Components
+import Nav from "./components/Nav/Nav";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Hero />
-        <Route exact path="/" component={Search} />
-        <Route exact path="/save" component={Save} />
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/">
+            <Search />
+          </Route>
+          <Route exact path="/save">
+            <Save />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

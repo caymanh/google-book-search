@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
-import Card from "../../components/Card";
-import Form from "../../components/Form";
-import Book from "../../components/Book";
-import { Col, Row, Container } from "../../components/Grid";
-import { List } from "../../components/List";
+import Jumbotron from "../../components/Jumbotron/Jumbotron";
+import Card from "../../components/Card/Card";
+import Form from "../../components/Form/Form";
+import Book from "../../components/Book/Book";
+import { Col, Row, Container } from "../../components/Grid/Grid";
+import { List } from "../../components/List/List";
 import API from "../../utils/API";
 import "./Search.css";
 
@@ -66,7 +66,7 @@ class Search extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <br />
         <br />
         {/* Container */}
@@ -134,7 +134,7 @@ class Search extends Component {
           <br />
         </Container>
         <br />
-      </>
+      </div>
     );
   }
 }

@@ -24,14 +24,14 @@ class Nav extends Component {
             Search
           </Link>
           <Link
-            to="/saved"
+            to="/save"
             className={
-              window.location.pathname === "/saved"
+              window.location.pathname === "/save"
                 ? "nav-link active"
                 : "nav-link"
             }
           >
-            Saved
+            Save
           </Link>
         </nav>
       </div>

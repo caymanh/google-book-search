@@ -1,40 +1,35 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Nav.css";
 
 class Nav extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar justify-content-start">
-          <Link
-            to="/"
-            className={
-              window.location.pathname === "/" ? "nav-link active" : "nav-link"
-            }
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">Google Books</Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <strong>Google Books</strong>
-          </Link>
-          <Link
-            to="/"
-            className={
-              window.location.pathname === "/" ? "nav-link active" : "nav-link"
-            }
-          >
-            Search
-          </Link>
-          <Link
-            to="/save"
-            className={
-              window.location.pathname === "/save"
-                ? "nav-link active"
-                : "nav-link"
-            }
-          >
-            Save
-          </Link>
-        </nav>
-      </div>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link className="nav-link" to="/">
+                Search
+              </Link>
+              <Link className="nav-link" to="/save">
+                Save
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
     );
   }
 }

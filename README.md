@@ -18,7 +18,7 @@
 
  ### Description
 
- Google Book Search is a React-based Google Books Search app that utilizes React lifecycle methods to query and display books based on user searches. The app have two pages - Search and Save.
+ Google Book Search is a React-based app that utilizes React lifecycle methods to query and display books based on user searches. The app have two pages - Search and Save.
  
  On the Search page, users can search for books via the Google Books API and render them. They have the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database. 
  
@@ -26,13 +26,13 @@
 
  The app is built using the MERN stack and utilizes the Google Books API to generate books data.
 
- The live app can be accessed [here](https://caymanh.github.io/employee-directory/).
+ The live app can be accessed [here](https://google-book-search-react-based.herokuapp.com/).
 
  <p align="center">
-    <img alt="Screenshot of Google Book Search" src="./client/public/img/google-book-search-01.jpg">
+    <img alt="Screenshot of Google Book Search" src="https://github.com/caymanh/google-book-search/blob/main/client/public/img/google-book-search-01.JPG">
 </p>
  <p align="center">
-    <img alt="Screenshot of Google Book Search" src="./client/public/img/google-book-search-03.jpg">
+    <img alt="Screenshot of Google Book Search" src="https://github.com/caymanh/google-book-search/blob/main/client/public/img/google-book-search-03.JPG">
 </p>
  
 

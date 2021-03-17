@@ -29,7 +29,10 @@
  The live app can be accessed [here](https://caymanh.github.io/employee-directory/).
 
  <p align="center">
-    <img alt="Screenshot of Google Book Search" src="">
+    <img alt="Screenshot of Google Book Search" src="./client/public/img/google-book-search-01.jpg">
+</p>
+ <p align="center">
+    <img alt="Screenshot of Google Book Search" src="./client/public/img/google-book-search-03.jpg">
 </p>
  
 

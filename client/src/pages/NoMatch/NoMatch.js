@@ -7,10 +7,7 @@ function NoMatch() {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <Jumbotron>
-            <h1 className="text-center text-">404 Page Not Found</h1>
-            
-          </Jumbotron>
+          <h1 className="text-center my-5 fs-5">404 Page Not Found</h1>
         </Col>
       </Row>
     </Container>

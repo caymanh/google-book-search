@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron/Jumbotron";
-import Card from "../../components/Card/Card";
 import Form from "../../components/Form/Form";
 import Book from "../../components/Book/Book";
 import { Col, Row, Container } from "../../components/Grid/Grid";
@@ -14,7 +13,7 @@ class Search extends Component {
   state = {
     books: [],
     q: "",
-    message: "Search For A Book!",
+    message: "",
   };
 
   // Function to handle input change in search bar
@@ -67,70 +66,49 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <br />
-        <br />
+        <Jumbotron />
+        <Form
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+          q={this.state.q}
+        />
         {/* Container */}
         <Container>
-          <div className="main-container">
-            <Row>
-              <Col size="md-12">
-                {/* Jumbotron */}
-                <Jumbotron>
-                  <h1 className="text-center">
-                    <strong style={{ color: "white" }}>
-                      Google Books Search
-                    </strong>
-                  </h1>
-                  <h5 className="text-center" style={{ color: "white" }}>
-                    MERN App to Search and Save Books
-                  </h5>
-                </Jumbotron>
-              </Col>
-              <Col size="md-12">
-                {/* Book Search Form */}
-                <Card title=" Book Search" icon="far fa-book">
-                  <Form
-                    handleInputChange={this.handleInputChange}
-                    handleFormSubmit={this.handleFormSubmit}
-                    q={this.state.q}
-                  />
-                </Card>
-              </Col>
-            </Row>
-            <Row>
-              <Col size="md-12">
-                {/* Search Results Card */}
-                <Card title="Search Results">
-                  {this.state.books.length ? (
-                    <List>
-                      {this.state.books.map((book) => (
-                        <Book
-                          key={book.id}
-                          title={book.volumeInfo.title}
-                          subtitle={book.volumeInfo.subtitle}
-                          link={book.volumeInfo.infoLink}
-                          authors={book.volumeInfo.authors.join(", ")}
-                          description={book.volumeInfo.description}
-                          image={book.volumeInfo.imageLinks.thumbnail}
-                          Button={() => (
-                            <button
-                              onClick={() => this.handleBookSave(book.id)}
-                              className="btn btn-primary ml-2"
-                            >
-                              Save
-                            </button>
-                          )}
-                        />
-                      ))}
-                    </List>
-                  ) : (
-                    <h5 className="text-center">{this.state.message}</h5>
-                  )}
-                </Card>
-              </Col>
-            </Row>
-            <br />
-          </div>
+          {/* Book Search Form */}
+
+          <Row>
+            <Col size="md-12">
+              {/* Search Results Card */}
+
+              {this.state.books.length ? (
+                <List>
+                  {this.state.books.map((book) => (
+                    <Book
+                      key={book.id}
+                      title={book.volumeInfo.title}
+                      subtitle={book.volumeInfo.subtitle}
+                      link={book.volumeInfo.infoLink}
+                      authors={book.volumeInfo.authors.join(", ")}
+                      description={book.volumeInfo.description}
+                      image={book.volumeInfo.imageLinks.thumbnail}
+                      Button={() => (
+                        <button
+                          onClick={() => this.handleBookSave(book.id)}
+                          className="btn btn-primary mx-2 btn-sm"
+                        >
+                          Save
+                        </button>
+                      )}
+                    />
+                  ))}
+                </List>
+              ) : (
+                <h5 className="text-center">{this.state.message}</h5>
+              )}
+            </Col>
+          </Row>
+          <br />
+
           <br />
         </Container>
         <br />

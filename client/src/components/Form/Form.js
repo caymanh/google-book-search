@@ -18,7 +18,7 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         </div>
       </div>
       <div className="row">
-      <div className="col">
+      <div className="col my-1">
         <button
           onClick={handleFormSubmit}
           type="submit"
